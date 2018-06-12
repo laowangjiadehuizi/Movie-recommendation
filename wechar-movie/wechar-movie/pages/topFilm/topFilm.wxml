@@ -1,0 +1,57 @@
+<!--pages/topFilm/topFilm.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar top-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider movieSlider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <scroll-view scroll-y="true" bindscrolltolower="lower">
+            <view class='douban'>
+              <view class='page-body'>
+                <navigator  wx:for="{{doubanList}}" wx:key="doubanListId" url="../filmDetail/filmDetail?id={{item.objectId}}">
+                  <view class='item'>
+                    <image class='poster' src="{{item.moviePic}}"></image>
+                    <view class='meta'>
+                      <text class='title'>{{item.name}}</text>
+                      <text class='directors'>导演：{{item.directors}}</text>
+                      <text class='artists'>演员：{{item.artists}}</text>
+                    </view>
+                    <view class='rating'>
+                      <text>{{item.rating}}</text>
+                    </view>
+                  </view>
+                </navigator>
+              </view>
+            </view>
+          </scroll-view>
+        </view>
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <scroll-view scroll-y="true">
+            <view class='douban'>
+              <navigator  wx:for="{{doubanList}}" wx:key="doubanListId" url="../filmDetail/filmDetail?id={{item.objectId}}">
+                <view class='item' wx:for="{{tomatoesList}}" wx:key="tomatoesListId">
+                  <image class='poster' src="{{item.moviePic}}"></image>
+                  <view class='meta'>
+                    <text class='title'>{{item.name}}</text>
+                    <text class='directors'>导演：{{item.directors}}</text>
+                      <text class='artists'>演员：{{item.artists}}</text>
+                  </view>
+                  <view class='rating'>
+                    <text>{{item.rating}}</text>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+page {
+  background-color: #F8F8F8;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
+.i-header{
+  height: 350rpx; 
+  text-align: center;
+}
+.g-bda-userinfo {
+  padding-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+  margin-bottom: 2rpx;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.userinfo-nickname{
+  color: #fff;
+}
+
+.bg{
+   background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1524929329647&di=969711f57b8cd16ee0f005a7ca824838&imgtype=0&src=http%3A%2F%2Fimg5q.duitang.com%2Fuploads%2Fitem%2F201207%2F29%2F20120729213734_hFL3y.thumb.700_0.jpeg);   
+   /* background-size:contain;  */
+   background-repeat:no-repeat; 
+   background-attachment: fixed;
+   width: 100%;
+}

@@ -1,0 +1,53 @@
+<view class="page">
+  <view class="page__hd i-header bg">
+    <view class="g-bd">
+      <view></view>
+      <view class="g-bda">
+        <view bindtap="" class="g-bda-userinfo">
+          <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+    <view class="page__bd">
+    <view class="weui-grids">
+      <block wx:for-items="{{grids}}" wx:key="{{index}}">
+        <navigator bindtap="{{item.click}}" class="weui-grid" wx:if="{{item.click}}" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/{{item.ico}}" />
+          <view class="weui-grid__label">{{item.name}}</view>
+        </navigator>
+        <navigator url="{{item.url}}" class="weui-grid" wx:if="{{!item.click}}" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="/images/{{item.ico}}" />
+          <view class="weui-grid__label">{{item.name}}</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- <view class='session'>
+  <view class='preson' style="background-image: url('../../images/6.jpeg');background-size:contain; background-repeat:no-repeat; background-attachment: fixed;">
+    <image src='../../images/22.jpg' class='presonIn'></image>
+    <view></view>
+  </view>
+</view> -->
+<!-- <view class='session'>
+  <view class='content'>
+    <view class='content-item'>
+      <image class='content-item-img' src='../../images/浏览记录.png'></image>
+      <text>浏览记录</text>
+    </view>
+    <view class='content-item'>
+      <image class='content-item-img' src='../../images/收藏.png'></image>
+      <text>收藏</text>
+    </view>
+    <view class='content-item'>
+      <image class='content-item-img' src='../../images/设置.png'></image>
+      <text>设置</text>
+    </view>
+  </view>
+</view> -->

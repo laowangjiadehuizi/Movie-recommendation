@@ -1,0 +1,17 @@
+/**app.wxss**/
+@import 'weui.wxss';
+page {
+  display: block;
+  background-color: #fff;
+  font-family: "微软雅黑";
+  font-size: 28rpx;
+}
+/* .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}  */

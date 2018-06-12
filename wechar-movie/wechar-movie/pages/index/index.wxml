@@ -1,0 +1,80 @@
+<!--index.wxml-->
+<view class="page">
+  <view class="search-bar">
+      <input class="search-txt" placeholder-class="search-txt-plc" bindfocus="viewSearch" placeholder="请输入关键词搜索" type="text"/>
+  </view>
+
+  <scroll-view scroll-y="true" class="scroll-view_y">
+    <view class='guess-like'>
+      <swiper indicator-dots="true" autoplay="true" interval="3000" duration="2000">
+        <navigator wx:for="{{results}}" wx:key="resultsId" url="../filmDetail/filmDetail?id={{item.objectId}}">
+          <swiper-item>
+            <image src="{{item.moviePic}}" mode="widthFix" />
+          </swiper-item>
+        </navigator>
+      </swiper>
+    </view>
+
+
+    <view class='coming'>
+      <view class='movie-text'>
+        <text>即将上映</text>
+        <!-- <text class='more'>更多></text> -->
+      </view>
+      <view class='movie'>
+        <scroll-view scroll-x class="scroll-view_x">
+          <navigator wx:for="{{comingList}}" wx:key="comingListId" url="../filmDetail/filmDetail?id={{item.objectId}}" class='movie-item'>
+            <image src="{{item.moviePic}}" mode="aspectFill"></image>
+            <view class='movie-com'>
+              <text>{{item.rating}}</text>
+            </view>
+            <view class='movie-title'>
+              <text>{{item.name}}</text>
+            </view>
+          </navigator>
+        </scroll-view>
+      </view>
+    </view>
+    <view class='now'>
+      <view class='movie-text'>
+        <text>正在上映</text>
+        <!-- <text class='more'>更多></text> -->
+      </view>
+      <view class='movie'>
+        <scroll-view scroll-x class="scroll-view_x">
+          <navigator wx:for="{{nowList}}" wx:key="nowListId" url="../filmDetail/filmDetail?id={{item.objectId}}" class='movie-item'>
+            <image src="{{item.moviePic}}" mode="aspectFill"></image>
+            <view class='movie-com'>
+              <text>{{item.rating}}</text>
+            </view>
+            <view class='movie-title'>
+              <text>{{item.name}}</text>
+            </view>
+          </navigator>
+        </scroll-view>
+      </view>
+    </view>
+
+
+    <view class='classic'>
+      <view class='movie-text'>
+        <text>经典电影</text>
+        <!-- <text class='more'>更多></text> -->
+      </view>
+      <view class='movie'>
+        <scroll-view scroll-x class="scroll-view_x">
+          <navigator wx:for="{{classicList}}" wx:key="classicId" url="../filmDetail/filmDetail?id={{item.objectId}}" class='movie-item'>
+            <image src="{{item.moviePic}}" mode="aspectFill"></image>
+            <view class='movie-com'>
+              <text>{{item.rating}}</text>
+            </view>
+            <view class='movie-title'>
+              <text>{{item.name}}</text>
+            </view>
+          </navigator>
+        </scroll-view>
+      </view>
+    </view>
+    <!-- </navigator> -->
+  </scroll-view>
+</view>

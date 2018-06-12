@@ -1,0 +1,15 @@
+<!--pages/filmDetail/filmDetail.wxml-->
+<scroll-view scroll-y>
+  <view class='meta'>
+    <image class='poster' src='{{row.moviePic}}' background-size='cover'></image>
+    <text class='title'>{{row.name}}({{row.year}})</text>
+    <text class='info rating'>评分：{{row.rating}}</text>
+    <text class='info'>导演：{{row.directors}}</text>
+    <text class='info'>主演：{{row.artists}}</text>
+  </view>
+<view class='summary'>
+  <view class='lable'>摘要</view>
+  <view class='content'>{{row.sub}}</view>
+</view>
+
+</scroll-view>

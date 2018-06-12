@@ -1,0 +1,15 @@
+<view class="weapp-about">
+    <view class="weapp-name">推你电影小程序</view>
+    <view class="webapp-intro">
+        <view class="webapp-intro-item">
+            <view class="webapp-intro-title">作者</view>
+            <view class="webapp-intro-content">LLG小组</view>
+        </view>
+        <view class="webapp-intro-item">
+            <view class="webapp-intro-title">说明书</view>
+            <view class="webapp-intro-content">
+            就是推荐你看啥片咯  多玩一下就会了~
+            </view>
+        </view>
+    </view>
+</view>

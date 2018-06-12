@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/filmDetail/filmDetail",
+    "pages/personInfo/personInfo",
+    "pages/setting/setting",
+    "pages/feedback/feedback",
+    "pages/systemInfo/systemInfo",
+    "pages/editPersonInfo/editPersonInfo",
+    "pages/about/about",
+    "pages/history/history",
+    "pages/search/search",
+    "pages/searchResult/searchResult",
+    "pages/my/my",
+    "pages/topFilm/topFilm"
+  ],
+  "window": {
+    "backgroundTextStyle": "white",
+    "navigationBarBackgroundColor": "#FFB473",
+    "navigationBarTitleText": "推你电影",
+    "navigationBarTextStyle": "dark",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#686868",
+    "selectedColor": "#ff7600",
+    "backgroundColor": "#f0f0f0",
+    "borderStyle": "#fff",
+    "list": [
+      {
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-active.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "text": "高分",
+        "iconPath": "images/top.png",
+        "selectedIconPath": "images/top-active.png",
+        "pagePath": "pages/topFilm/topFilm"
+      },
+      {
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my-active.png",
+        "pagePath": "pages/my/my"
+      }
+    ]
+  },
+  "networkTimeout":{
+    "request":1000,
+    "downloadFile":1000
+  },
+  "debug":"true"
+}
